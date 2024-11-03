@@ -3,20 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Ushan's Portfolio </title>
+    <link rel="stylesheet" href="Styles.css">
+    <title>Ushan's Portfolio</title>
 </head>
 <body>
-    <section>
-    <div id="header">
-        <div class="container">
-            <header class="header1">
-                <div class="bx bx-menu" id= "menu-icon"></div>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="AboutMe.html">About Me</a></li>
-                    <li><a href="ContactMe.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="Blog.html">Blogs</a></li>
+                <li><a href="#" onclick="showContact()">Contact Me</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Contact me page -->
+     
+    <section id="contact" class="contact-section" style="display: none;">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <div class="contact-details">
+                    <p><img src="Images/dow2.png" alt="Email Icon">ushanfernando18@gmail.com</p>
+                    <p><img src="Images/phone2.png" alt="Phone Icon">+94716012756</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://instagram.com" target="_blank"><img src="Images/instagram.png" alt="Instagram" width="25" height="25"></a> 
+                    <a href="https://facebook.com" target="_blank"><img src="Images/facebook.png" alt="Facebook" width="25" height="25"></a>
+                    <a href="https://linkedin.com" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Phone Number</label>
+                    <input type="text" id="number" name="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Made by Ushan Fernando</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list-active');
+        });
+
+        function showContact() {
+            const contactSection = document.getElementById('contact');
+            if (contactSection.style.display === 'none') {
+                contactSection.style.display = 'flex';
+            } else {
+                contactSection.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
