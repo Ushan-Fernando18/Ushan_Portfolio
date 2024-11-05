@@ -4,5 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
-    <title>Ushan's Portfolio </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
+    <title>Ushan's Portfolio</title>
 </head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
+                <li><a href="#" onclick="showContact()">Contact Me</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+    <main id="about-content">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="Images/file (1).png" alt="Your Photo">
+                    </div>
+                    <div class="about-text">
+                        
+                        <h1>About Me</h1>
+                        <hr>
+                        <p>I am Ushan Fernando. I studied at St.Peters College Colombo 04.A dedicated and enthusiastic individual with a strong foundation in web development. 
+                            My ultimate goal is to have a significant effect in the field of AI and data science, with an emphasis on both professional and personal development. 
+                            I have developed my front-end and back-end web development abilities as an undergraduate trainee.
+                             I work best in fast-paced, dynamic settings where I can constantly learn new things and adjust to new difficulties.
+                              I want to eventually assume more significant positions that allow me to use my artificial intelligence skills.
+                               The chance to work with varied teams and contribute to creative solutions that promote good change inspires me.
+                                I'm dedicated to producing outcomes that go above and beyond, whether that means directing cross-functional projects,
+                                 carrying out strategic plans, or boosting operational effectiveness. I am keen to contribute to the development of data science and am enthusiastic about its future. I am motivated by the prospect of collaborating with diverse teams and taking on impactful roles. 
+                            Whether it's implementing cutting-edge technologies or optimizing processes, I am committed to delivering exceptional results.</p>
+                          
+
+                            <h2>Education</h2>
+                            <hr>
+                        <p>From a young age, I developed a keen interest in technology and problem-solving. I attended St. Peter's College, Colombo 04, 
+                            where I successfully completed my Ordinary Level examinations with 7 A's and 2 B's, and my Advanced Level examinations in the Physical Science stream.
+                             Building on this solid basis, I attended the University of Westminster to obtain a Bachelor of Science in Computer Science. 
+                             I was able to learn more about the complexities of software development and the possibilities of cutting-edge technology thanks to this encounter.
+                              Technology's future excites me, and I can't wait to contribute to creative projects that improve the world.
+                             The idea of working with various teams and assuming challenging tasks inspires me.</p>
+                             
+                             
+                        <h2>Experience</h2>
+                        <hr>
+
+                        <p>I'm an assistant martial arts trainer in Sri Lanka Jeet-Kune-Do Association with 6 years training. 
+                            And i have participated in various tournaments and this is a remarkable experience in my sports journey.
+                            After finishing AL's i worked as the team coordinator in Lanka Property Web company and 
+                            while working i got to work with the IT department and that helped me learn more about web development and AI.
+                            Currently, I attend the University of Westminster and work as a Process Associate at HCL Tech Sri Lanka.
+                            I've had the exceptional chance to collaborate directly with the Observability and Problem Management teams, 
+                            as well as work on a range of projects that have given me the chance to demonstrate my abilities and inventiveness. 
+                            In my freelancing career, I'm eager to take on new and intriguing tasks, and I'm proud of the successful projects I've worked on.</p>
+                    </div>
+                </div>
+    </main>
+
+       <!-- Contact Me page (It is Hidden and will only shownwhen the user click on the contact me in nav bar) -->
+
+       <section id="contact" class="contact-section" style="display: none;">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <div class="contact-details">
+                    <p><img src="Images/dow2.png" alt="Email Icon">ushanfernando18@gmail.com</p>
+                    <p><img src="Images/phone2.png" alt="Phone Icon">+94716012756</p>
+                </div>
+                <div class="social-media">   
+                    <!-- Social media icons and links with specified with and height -->
+                    <!-- and the links will be opened in a new tab since i have used the target attribute -->
+                    <a href="https://instagram.com" target="_blank"><img src="Images/instagram.png"alt="Instagram" width="35" height="35" ></a> 
+                    <a href="https://facebook.com" target="_blank"><img src="Images/facebook.png" alt="Facebook" width="35" height="35"></a>
+                    <a href="https://www.linkedin.com/in/ushan-fernando-380454265/" target="_blank"><img src="Images/linkedin.png" alt="Linked In" width="35" height="35"></a>
+                </div>
+                
+            </div>
+            <!-- Form to get user inputs and form element is used to collect user inputs -->
+             <!-- all the 4 fields are required before submittting -->
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Phone Number</label>
+                    <input type="text" id="number" name="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
+   <!-- Footer in the webpage -->
+   <footer>
+    <p>Copyright <i class="fas fa-copyright"></i>&copy; Made by Ushan Fernando</p>
+</footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list-active');
+        });
+
+        // Function to show the Contact Me section and hide the main content
+        function showContact() {
+            document.getElementById('about-content').style.display = 'none';
+            document.getElementById('contact').style.display = 'flex';
+        }
+
+        //  Function to hide the Contact Me section and show the main content
+        function hideContact() {
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('contact').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

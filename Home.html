@@ -4,24 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
-    <title>Ushan's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
+
+<title>Ushan's Portfolio</title>
 </head>
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
         <nav>
+            <!-- Navigation bar -->
+
             <ul class="nav-list">
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="AboutMe.html">About Me</a></li>
-                <li><a href="Blog.html">Blogs</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
                 <li><a href="#" onclick="showContact()">Contact Me</a></li>
             </ul>
             <div class="menu-toggle">&#9776;</div>
         </nav>
     </header>
 
-    <!-- Contact me page -->
-     
+  
+    <main id="main-content">
+<section class="home-section">
+    <div class="home-container">
+        <!-- Image on the left side -->
+        <div class="home-image">
+            <img src="Images/ushan1.png" alt="Ushan Fernando" >
+        </div>
+        <!-- details in the right side of the image -->
+        <div class="home-info">
+            <p>Hi! I'm <span class="highlighted-name">Ushan Fernando</span>, Web developer based in Sri Lanka.</p>
+            <button class="connect-button" onclick="showContact()">Let's Connect!</button>
+            <!-- Connects to the contact me page -->
+        </div>
+    </div>
+</section>
+        <!--Next section below the image for more details -->
+        <section class="info-section">
+            <h1>More Details</h1>
+            <div class="info-box">
+                <h2>My Blogs</h2>
+                <p>I've been blogging for a while now, sharing my thoughts and experiences on a variety of topics. From tech and science to travel and personal growth, I've covered it all.
+                I love researching and writing about things that interest me, and I hope my writing can inform and inspire others.
+                Blogging has been a great way to connect with people from all over the world. I'm excited to keep learning and growing as a blogger.</p>
+                <!-- Button for about me page -->
+                 <a href="AboutMe.html" class="read-more-button">Read More</a>  
+            </div>
+            <div class="info-box">
+                <h2>Projects</h2>
+                <p> I am glad to share my thoughts and works with the world as a creative and ambitious writer and developer, My blog posts include everything from tech trends down to travel experiences. I try to make my writings informative, interesting, and of course, inspiring.
+                 My projects protect my technical skills and creativity. <time datetime="2023-05">Since <span class="highlighted-time">May 2023</span></time>, I have been working on this and am proud of what I've accomplished.
+                Take a look at my portfolio if you're looking for that nexus where words and code meet.</p>
+                <!-- Used the datetime function in the above text -->
+                <!-- Button for Blogs page -->
+                <a href="Blogs.html" class="read-more-button">Visit Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Me page (It is Hidden and will only shownwhen the user click on the contact me in nav bar) -->
+
     <section id="contact" class="contact-section" style="display: none;">
         <div class="contact-container">
             <div class="contact-info">
@@ -30,12 +81,17 @@
                     <p><img src="Images/dow2.png" alt="Email Icon">ushanfernando18@gmail.com</p>
                     <p><img src="Images/phone2.png" alt="Phone Icon">+94716012756</p>
                 </div>
-                <div class="social-media">
-                    <a href="https://instagram.com" target="_blank"><img src="Images/instagram.png" alt="Instagram" width="25" height="25"></a> 
-                    <a href="https://facebook.com" target="_blank"><img src="Images/facebook.png" alt="Facebook" width="25" height="25"></a>
-                    <a href="https://linkedin.com" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn" width="25" height="25"></a>
+                <div class="social-media">   
+                    <!-- Social media icons and links with specified with and height -->
+                    <!-- and the links will be opened in a new tab since i have used the target attribute -->
+                    <a href="https://instagram.com" target="_blank"><img src="Images/instagram.png"alt="Instagram" width="35" height="35" ></a> 
+                    <a href="https://facebook.com" target="_blank"><img src="Images/facebook.png" alt="Facebook" width="35" height="35"></a>
+                    <a href="https://www.linkedin.com/in/ushan-fernando-380454265/" target="_blank"><img src="Images/linkedin.png" alt="Linked In" width="35" height="35"></a>
                 </div>
+                
             </div>
+            <!-- Form to get user inputs and form element is used to collect user inputs -->
+             <!-- all the 4 fields are required before submittting -->
             <form class="contact-form">
                 <div class="form-group">
                     <label for="name">Full Name</label>
@@ -43,6 +99,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
+                    <!-- Input type is email for proper email input and validation -->
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
@@ -51,16 +108,19 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
                 <button type="submit" class="submit-button">Submit</button>
             </form>
         </div>
     </section>
 
+    <!-- Footer in the webpage -->
     <footer>
-        <p>&copy; 2024 Made by Ushan Fernando</p>
+        <p>Copyright <i class="fas fa-copyright"></i>&copy; Made by Ushan Fernando</p>
     </footer>
+
+    <!-- Java script part for responsiveness -->
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
@@ -70,13 +130,16 @@
             navList.classList.toggle('nav-list-active');
         });
 
+        // Function to show the Contact Me page and hide the main content
         function showContact() {
-            const contactSection = document.getElementById('contact');
-            if (contactSection.style.display === 'none') {
-                contactSection.style.display = 'flex';
-            } else {
-                contactSection.style.display = 'none';
-            }
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('contact').style.display = 'flex';
+        }
+
+        // Function to hide the Contact Me page and show the main content
+        function hideContact() {
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('contact').style.display = 'none';
         }
     </script>
 </body>

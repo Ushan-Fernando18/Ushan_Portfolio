@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
+    <title>Ushan's Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="Blogs.html">Blogs</a></li>
+                <li><a href="#" onclick="showContact()">Contact Me</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+
+
+    <main id="blogs-content">
+        <section class="projects-section">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Python Project</h3>
+                    <p>I developed a Python-based transaction management system with a user-friendly GUI, 
+                        In order to facilitate effective data entry, editing, deletion, and retrieval, this project sought to optimize daily transaction operations.
+                         To efficiently store and handle transaction records, I put data structures and algorithms into practice. The GUI, which was created with a Python-based toolkit such as Tkinter,
+                          gave users the ability to sort, filter, and view transaction history, offering insightful information for analysis and decision-making.
+                         This project improved my knowledge of data structures, Python programming, and GUI design while giving me hands-on experience creating real-world applications.</p>
+                    <a href="https://github.com/Ushan-Fernando18/Python_Coursework">Visit Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Java Project</h3>
+                    <p>I developed a Java-based Student Management System to streamline the administration of student records. 
+                        Effective administration of student enrollment, tracking, and performance evaluation is guaranteed by this system.
+                         It enables smooth data entry, editing, and retrieval through the use of strong data validation and an intuitive user interface.
+                          Additionally, the system has search features that allow users to find specific student data by name, ID, or module details.
+                           It also keeps track of student achievements all of which offer insightful information for academic analysis and decision-making.
+                           Through this project, I was able to improve my understanding of database administration, object-oriented programming, 
+                           and Java programming while also gaining practical experience in developing a working application.</p>
+                    <a href="https://github.com/Ushan-Fernando18/Java_Coursework">Visit Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>HTML & CSS Project</h3>
+                    <p>Our HTML and CSS project aimed to raise awareness about environmental sustainability,
+                         specifically focusing on the UN Sustainable Development Goal of protecting terrestrial ecosystems.
+                          We created an intuitive user interface using HTML and CSS and JavaScript that successfully conveys important signals regarding biodiversity loss,
+                           land degradation, and deforestation. Our project urges visitors to take action to save our environment and highlights the pressing need for sustainable behaviors.
+                        This project not only contributed to a worthy cause but also equipped us with practical we developing skills and developing group skills that will be beneficial in future endeavors.</p>
+                    <a href="https://github.com/Ushan-Fernando18/Html_Css_Group_Project">Visit Project</a>
+                </div>
+            </div>
+        </section>
+        <section class="projects-section">
+            <h2>My Blogs</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>My Hobbies And Sports</h3>
+                    <p>I am enthusiastic about martial arts and cricket. I have 6 years of training in Jeet Kune-Do starting from a young age
+                         and also i am now an an assistant trainer at the Sri Lanka Jeet-Kune-Do Association which i'm proud of.
+                          It has been an enriching experience to participate in various tournaments. 
+                          I am also very keen on cricket and have represented St. Peter's College in the second division team.
+                           Cricket is one of the games I love most and enjoy, 
+                        while my commitment goes to martial arts-discipline and to teach others who so wish to learn while i'm hoping to go to national and global level.</p>
+                    
+                </div>
+                <div class="project-card">
+                    <h3>Ambition</h3>
+                    <p>My ambition is to become a skilled web developer and explore the exciting field of Artificial Intelligence.
+                         I am passionate about crafting innovative and user-friendly web applications.
+                          To achieve this, I am dedicated to mastering HTML, CSS, JavaScript, and backend technologies like Python and Node.js.
+                           I am also keen on learning about machine learning, data science, and other AI-related concepts.
+                         I am excited about the future of technology and eager to contribute to the development of innovative solutions.</p>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- Contact Me page (It is Hidden and will only shownwhen the user click on the contact me in nav bar) -->
+
+   <section id="contact" class="contact-section" style="display: none;">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Me</h2>
+            <div class="contact-details">
+                <p><img src="Images/dow2.png" alt="Email Icon">ushanfernando18@gmail.com</p>
+                <p><img src="Images/phone2.png" alt="Phone Icon">+94716012756</p>
+            </div>
+            <div class="social-media">   
+                <!-- Social media icons and links with specified with and height -->
+                <!-- and the links will be opened in a new tab since i have used the target attribute -->
+                <a href="https://instagram.com" target="_blank"><img src="Images/instagram.png"alt="Instagram" width="35" height="35" ></a> 
+                <a href="https://facebook.com" target="_blank"><img src="Images/facebook.png" alt="Facebook" width="35" height="35"></a>
+                <a href="https://www.linkedin.com/in/ushan-fernando-380454265/" target="_blank"><img src="Images/linkedin.png" alt="Linked In" width="35" height="35"></a>
+            </div>
+            
+        </div>
+        <!-- Form to get user inputs and form element is used to collect user inputs -->
+         <!-- all the 4 fields are required before submittting -->
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="text" id="number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</section>
+
+  <!-- Footer in the webpage -->
+  <footer>
+    <p>Copyright <i class="fas fa-copyright"></i>&copy; Made by Ushan Fernando</p>
+</footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list-active');
+        });
+
+        // Function to show the Contact Me section and hide the main content
+        function showContact() {
+            document.getElementById('blogs-content').style.display = 'none';
+            document.getElementById('contact').style.display = 'flex';
+        }
+
+        // Function to hide the Contact Me section and show the main content
+        function hideContact() {
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('contact').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
